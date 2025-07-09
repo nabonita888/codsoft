@@ -1,117 +1,37 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Nabonita's Portfolio</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      line-height: 1.6;
-      background-color: #f2f2f2;
-    }
+def calculator():
+    print("Welcome to the Simple Calculator!")
+    
+    try:
+        num1 = float(input("Enter the first number: "))
+        num2 = float(input("Enter the second number: "))
+    except ValueError:
+        print("Invalid input! Please enter numeric values.")
+        return
 
-    header {
-      background-color: #333;
-      color: white;
-      padding: 30px;
-      text-align: center;
-    }
+    print("\nChoose an operation:")
+    print("1. Addition (+)")
+    print("2. Subtraction (-)")
+    print("3. Multiplication (*)")
+    print("4. Division (/)")
 
-    section {
-      padding: 20px;
-      background-color: white;
-      margin: 10px;
-    }
+    choice = input("Enter your choice (1/2/3/4 or +, -, *, /): ")
 
-    h2 {
-      border-bottom: 2px solid #333;
-      padding-bottom: 5px;
-    }
+    if choice == '1' or choice == '+':
+        result = num1 + num2
+        print(f"Result: {num1} + {num2} = {result}")
+    elif choice == '2' or choice == '-':
+        result = num1 - num2
+        print(f"Result: {num1} - {num2} = {result}")
+    elif choice == '3' or choice == '*':
+        result = num1 * num2
+        print(f"Result: {num1} * {num2} = {result}")
+    elif choice == '4' or choice == '/':
+        if num2 == 0:
+            print("Error: Cannot divide by zero.")
+        else:
+            result = num1 / num2
+            print(f"Result: {num1} / {num2} = {result}")
+    else:
+        print("Invalid operation choice.")
 
-    img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 10px;
-    }
-
-    ul {
-      list-style-type: none;
-      padding: 0;
-    }
-
-    ul li {
-      background: #ddd;
-      margin: 5px 0;
-      padding: 8px;
-      border-radius: 5px;
-    }
-
-    .project {
-      margin-bottom: 20px;
-    }
-
-    footer {
-      text-align: center;
-      padding: 15px;
-      background-color: #333;
-      color: white;
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <h1>Nabonita</h1>
-    <p>Web Developer | Designer | Problem Solver</p>
-  </header>
-
-  <section id="about">
-    <h2>About Me</h2>
-    <img src="nabo.jpg" alt="Nabonita's Photo" width="200" height="200" />
-    <p>Hello! I'm Nabonita, a passionate web developer skilled in HTML, CSS, and JavaScript. I love building beautiful and responsive websites.</p>
-  </section>
-
-  <section id="skills">
-    <h2>Skills</h2>
-    <ul>
-      <li>HTML</li>
-      <li>CSS</li>
-      <li>JavaScript</li>
-      <li>React</li>
-      <li>Git & GitHub</li>
-    </ul>
-  </section>
-
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="project">
-      <h3>Project 1</h3>
-      <img src="project1.jpg" alt="Project 1">
-      <p>A responsive portfolio site built with HTML and CSS.</p>
-    </div>
-    <div class="project">
-      <h3>Project 2</h3>
-      <img src="project2.jpg" alt="Project 2">
-      <p>A to-do list app built with JavaScript.</p>
-    </div>
-  </section>
-
-  <section id="resume">
-    <h2>Resume</h2>
-    <a href="resume.pdf" download>Download My Resume (PDF)</a>
-  </section>
-
-  <section id="contact">
-    <h2>Contact Me</h2>
-    <p>Email: <a href="mailto:nabonita958@gmail.com">nabonita958@gmail.com</a></p>
-    <p>Phone: +91-9876543210</p>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 Nabonita. All rights reserved.</p>
-  </footer>
-</body>
-</html>
-[6:20 am, 9/7/2025] Jatin Vai: 
+calculator()
